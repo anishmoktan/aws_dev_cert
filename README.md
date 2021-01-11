@@ -2,7 +2,7 @@
 
 AWS Developer Certification Services
 
-Amazon EC2:
+##Amazon EC2:
 
 Virtual machine (instance) on the data center, that can be resizable, scalable, compute capacity and quantity. Gives you complete control of the resources that can be compatible with AWS environment. The price we pay depends on the duration and capacity of resources used.
 
