@@ -1,4 +1,4 @@
-# aws_dev_cert
+# AWS Developer Certification
 
 AWS Developer Certification Services
 
