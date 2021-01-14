@@ -1,6 +1,4 @@
-# AWS Developer Certification
-
-AWS Developer Certification Services
+# AWS Developer Certification Services
 
 ### Amazon EC2:
 
