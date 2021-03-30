@@ -14,3 +14,12 @@
 #### Your company is planning to use the Simple Storage Service to host objects that will be accessed by users. There is a speculation that there would be roughly 6000 GET requests per second. Which of the following could be used to ensure optimal performance?
 - Use a CloudFront distribution in front of the S3 bucket :you can use CloudFront to give the objects to the user and cache them at the Edge locations so that the requests on the bucket are reduced.
 - Enable S3 Transfer Acceleration: it can speed up content transfers to and from Amazon S3 by as much as 50-500% for long-distance transfer of larger objects.
+
+#### A company has a Cloudformation template that is used to create a huge list of resources. It creates a VPC, subnets, EC2 Instances, Autoscaling Groups, Load Balancers etc. Which of the following should be considered when designing such Cloudformation templates?
+
+A. Ensure to create one entire stack from the template.
+B. Look towards breaking the templates into smaller manageable templates.
+C. Package the templates together and use the cloudformation deploy command.
+D. Package the templates together and use the cloudformation package command.
+
+- Answer - B: As your infrastructure grows, common patterns can emerge in which you declare the same components in each of your templates. You can separate out these common components and create dedicated templates for them. That way, you can mix and match different templates but use nested stacks to create a single, unified stack. Nested stacks are stacks that create other stacks. To create nested stacks, use the AWS::CloudFormation::Stack resource in your template to reference other templates.
