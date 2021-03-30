@@ -6,3 +6,7 @@
 #### You have a lambda function that is processed asynchronously. You need a way to check and debug issues if the function fails. How could you accomplish this?
 - Assign dead letter queue
 - Any Lambda function invoked asynchronously is retried twice before the event is discarded. If the retries fail and you're unsure why, use Dead Letter Queues (DLQ) to direct unprocessed events to an Amazon SQS queue to analyze the failure.
+
+#### You are developing an application that is going to make use of Amazon Kinesis. Due to the high throughput, you decide to have multiple shards for the streams. Which of the following is TRUE when it comes to processing data across multiple shards?
+- You cannot guarantee the order of data across multiple shards. It's possible only within a shard.
+- Kinesis Data Streams lets you order records and read and replay records in the same order to many Kinesis Data Streams applications. To enable write ordering, Kinesis Data Streams expects you to call the PutRecord API to write serially to a shard while using the sequenceNumberForOrdering parameter. Setting this parameter guarantees strictly increasing of sequence numbers for puts from the same client and to the same partition key.
