@@ -23,3 +23,12 @@ C. Package the templates together and use the cloudformation deploy command.
 D. Package the templates together and use the cloudformation package command.
 
 - Answer - B: As your infrastructure grows, common patterns can emerge in which you declare the same components in each of your templates. You can separate out these common components and create dedicated templates for them. That way, you can mix and match different templates but use nested stacks to create a single, unified stack. Nested stacks are stacks that create other stacks. To create nested stacks, use the AWS::CloudFormation::Stack resource in your template to reference other templates.
+
+#### You are developing a common lambda function that will be used across several development environments such as dev, qa, staging, etc. The lambda function needs to interact with each of these development environments. What is the best way to develop the Lambda function?
+
+A. Create a Lambda function for each environment so that each function can point to its respective environment.
+B. Create one Lambda function and use environment variables for each environment to interact.
+C. Create one Lambda function and create several versions for each environment.
+D. Create one Lambda function and create several ALIAS for each environment.
+
+Answer – B: Environment variables for Lambda functions enable you to dynamically pass settings to your function code and libraries without making changes to your code. Environment variables are key-value pairs that you create and modify as part of your function configuration, using either the AWS Lambda Console, the AWS Lambda CLI or the AWS Lambda SDK. AWS Lambda then makes these key-value pairs available to your Lambda function code using standard APIs supported by the language, like process.env for Node.js functions.
