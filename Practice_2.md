@@ -10,3 +10,7 @@
 #### You are developing an application that is going to make use of Amazon Kinesis. Due to the high throughput, you decide to have multiple shards for the streams. Which of the following is TRUE when it comes to processing data across multiple shards?
 - You cannot guarantee the order of data across multiple shards. It's possible only within a shard.
 - Kinesis Data Streams lets you order records and read and replay records in the same order to many Kinesis Data Streams applications. To enable write ordering, Kinesis Data Streams expects you to call the PutRecord API to write serially to a shard while using the sequenceNumberForOrdering parameter. Setting this parameter guarantees strictly increasing of sequence numbers for puts from the same client and to the same partition key.
+
+#### Your company is planning to use the Simple Storage Service to host objects that will be accessed by users. There is a speculation that there would be roughly 6000 GET requests per second. Which of the following could be used to ensure optimal performance?
+- Use a CloudFront distribution in front of the S3 bucket :you can use CloudFront to give the objects to the user and cache them at the Edge locations so that the requests on the bucket are reduced.
+- Enable S3 Transfer Acceleration: it can speed up content transfers to and from Amazon S3 by as much as 50-500% for long-distance transfer of larger objects.
