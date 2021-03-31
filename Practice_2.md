@@ -32,3 +32,12 @@ C. Create one Lambda function and create several versions for each environment.
 D. Create one Lambda function and create several ALIAS for each environment.
 
 Answer – B: Environment variables for Lambda functions enable you to dynamically pass settings to your function code and libraries without making changes to your code. Environment variables are key-value pairs that you create and modify as part of your function configuration, using either the AWS Lambda Console, the AWS Lambda CLI or the AWS Lambda SDK. AWS Lambda then makes these key-value pairs available to your Lambda function code using standard APIs supported by the language, like process.env for Node.js functions.
+
+#### Your development team is developing several lambda functions for testing. An external .Net program will call these functions. The program needs to call each lambda function version for testing purposes. How can you accomplish this in the easiest way to ensure the least changes need to be made to the .Net program?
+
+A. Create different environment variables for the Lambda function.
+B. Create different versions for the Lambda function.
+C. Create one or more ALIAS and reference it in the program.
+D. Use the SAM for deployment of the functions.
+
+Answer – C: You can create one or more aliases for your Lambda function. An AWS Lambda alias is like a pointer to a specific Lambda function version. By using aliases, you can access the Lambda function. An alias is pointing to (for example, to invoke the function) without the caller having to know the specific version the alias is pointing to.
